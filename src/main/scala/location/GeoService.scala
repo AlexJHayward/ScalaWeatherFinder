@@ -9,6 +9,6 @@ class GeoService(client: Client)(implicit ec: ExecutionContext) {
   def locate(place: String): Future[GeoResult] = client.lookup(place).map { sequence ⇒
     sequence.map { result ⇒
       GeoTranslator.translate(result)
-    }.head
+    }
   }
 }
