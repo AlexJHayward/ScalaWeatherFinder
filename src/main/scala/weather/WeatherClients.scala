@@ -17,11 +17,7 @@ object WeatherClients {
 
     private val client = DarkSky.basicClient[IO](apiKey)
 
-    override def forecast(lat: Float, long: Float): Future[Either[WeatherError, DarkSkyResponse]] = {
-
-      val f = client.forecast(lat, long)
-
-      f.unsafeToFuture()
-    }
+    override def forecast(lat: Float, long: Float): Future[Either[WeatherError, DarkSkyResponse]] =
+      client.forecast(lat, long).unsafeToFuture()
   }
 }

@@ -8,7 +8,7 @@ class WeatherAppSpec extends FunSuite with Matchers with ScalaFutures with Integ
 
   test("should be able to get a GeoResponse") {
 
-    val r = newMockGeoService.locateOne("London")
+    val r = newMockGeoService.locate("London")
     whenReady(r) {v =>
       v shouldBe expectedGeoResponse
     }

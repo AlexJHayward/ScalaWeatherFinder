@@ -13,7 +13,7 @@ object GeoClients {
   class GeoClient(implicit ec: ExecutionContext) extends Client {
 
     //pls don't steal my API key...
-    private val coder = Geocoder.create("AIzaSyBYFO94BFQhpj9M8GW1iPHt7juYQHKXgtg")
+    private val coder = Geocoder.create("API_KEY")
 
     override def lookup(location: String): Future[Seq[Result]] = {
       Future(coder.lookup(location))
