@@ -4,8 +4,6 @@ import cats.effect.IO
 import com.snowplowanalytics.weather.Errors.WeatherError
 import com.snowplowanalytics.weather.providers.darksky.Responses.DarkSkyResponse
 import com.snowplowanalytics.weather.providers.darksky._
-import domain.WeatherResult
-import domain.mock.MockResponses
 
 import scala.concurrent.{ExecutionContext, Future}
 
